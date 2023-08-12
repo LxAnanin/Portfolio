@@ -19,12 +19,12 @@
   <li>Протестировать вкладку "События" в Личном кабинете учителя</li>
 </ol>
 
-<p>Что сделал:</p>
-> <a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a>
+<p>Что сделал:<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a></p>
+<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a>
 
 <br>
 
-Дополнительные файлы в репозитории показывают пример составления SQL и API запросов
+<p>Дополнительные файлы в репозитории показывают пример составления SQL и API запросов</p>
 
 ## Контактная информация
 Email: <lxananin@gmail.com>
