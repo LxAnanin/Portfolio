@@ -1,6 +1,11 @@
-1
-SELECT species_name FROM species
-WHERE species_id = (SELECT MIN(species_id) FROM species);
+тото, тото
+
+## Составьте запрос, который выведет имя вида с наименьшим id
+
+```SELECT species_name FROM species
+WHERE species_id = (SELECT MIN(species_id) FROM species);```
+
+
 
 SELECT species_name FROM species
 WHERE species_amount > 1800;
