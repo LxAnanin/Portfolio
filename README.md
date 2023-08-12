@@ -13,12 +13,23 @@
 
 
 ## Проекты
-Проект 1: тест кабинета учителя в приложении Skyeng</br>
-<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-">  </a>
+<p> Проект 1: тест кабинета учителя в приложении Skyeng</p>
+<p>Что нужно было сделать:<p>
+<ol>
+  <li>Задача №1</li>
+  <li>Задача №2.</li>
+</ol>
+
+> <a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a>
+
+<p>Выводы (итоги):<p>
+<ol>
+  <li>Итог №1</li>
+  <li>Итог №2</li>
+</ol>
 
 
 ## Контактная информация
 Email: <lxananin@gmail.com>
-
 
 
