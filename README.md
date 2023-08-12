@@ -20,7 +20,6 @@
 </ol>
 
 <p>Что сделал:<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a></p>
-<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a>
 
 <br>
 
