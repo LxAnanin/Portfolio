@@ -20,6 +20,7 @@
   <li>Задача №2.</li>
 </ol>
 
+<p>Что сделал:<p>
 > <a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-"> Ссылка на проект </a>
 
 <p>Выводы (итоги):<p>
