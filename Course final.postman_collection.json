@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "c2ba40c5-3209-446d-82df-bb395e238ed6",
+		"name": "Course final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11041799"
+	},
+	"item": [
+		{
+			"name": "Создание события в прошлом",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventIdPast\"\r",
+							"var value = pm.response.json().data.payload.id \r",
+							"pm.collectionVariables.set(key, value)\r",
+							"\r",
+							"var key1 = \"OldStartAtPast\"\r",
+							"var value1 = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key1, value1)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-25T06:00:00+03:00\",\r\n    \"endAt\": \"2023-06-25T06:30:00+03:00\",\r\n    \"title\": \"Aa\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события в будущем",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventIdFuture\"\r",
+							"var value = pm.response.json().data.payload.id \r",
+							"pm.collectionVariables.set(key, value)\r",
+							"\r",
+							"var key1 = \"OldStartAtFuture\"\r",
+							"var value1 = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key1, value1)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-28T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-28T05:30:00+03:00\",\r\n    \"title\": \"Aa\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события в текущем",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var key = \"EventIdNow\"\r",
+							"var value = pm.response.json().data.payload.id \r",
+							"pm.collectionVariables.set(key, value)\r",
+							"\r",
+							"var key1 = \"OldStartAtNow\"\r",
+							"var value1 = pm.response.json().data.startAt\r",
+							"pm.collectionVariables.set(key1, value1)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-26T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-26T05:30:00+03:00\",\r\n    \"title\": \"Aa\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события с некорректной датой",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-31T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-31T05:30:00+03:00\",\r\n    \"title\": \"Aa\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события с пустой датой",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"\",\r\n    \"endAt\": \"\",\r\n    \"title\": \"Aa\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание события с пустым названием",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-26T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-26T05:30:00+03:00\",\r\n    \"title\": \"\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}createPersonal",
+					"host": [
+						"{{mainURL}}createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(изменение только Названия)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"{{OldStartAt}}\",\r\n    \"endAt\": \"2023-06-26T05:30:00+03:00\",\r\n    \"title\": \"АаFf\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\",\r\n    \"id\":{{EventIdNow}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(изменение только Описания)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"{{OldStartAt}}\",\r\n    \"endAt\": \"2023-06-26T05:30:00+03:00\",\r\n    \"title\": \"Аа\",\r\n    \"description\": \"Описание\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\",\r\n    \"id\":{{EventIdNow}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(изменение только Даты и времени)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-27T07:30:00+03:00\",\r\n    \"endAt\": \"2023-06-27T08:00:00+03:00\",\r\n    \"title\": \"Аа\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\",\r\n    \"id\":{{EventIdNow}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(изменение только Цвета)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-26T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-26T05:30:00+03:00\",\r\n    \"title\": \"Аа\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#6D9AB5\",\r\n    \"id\":{{EventIdNow}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(изменение всех параметров)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-27T06:00:00+03:00\",\r\n    \"endAt\": \"2023-06-27T06:30:00+03:00\",\r\n    \"title\": \"АаАа\",\r\n    \"description\": \"Описание\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#786DB5\",\r\n    \"id\":{{EventIdNow}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование события(ничего не менять)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token_global\": \"{{myToken}}\",\r\n    \"startAt\": \"2023-06-28T05:00:00+03:00\",\r\n    \"endAt\": \"2023-06-28T05:30:00+03:00\",\r\n    \"title\": \"Аа\",\r\n    \"color\": \"#fff\",\r\n    \"backgroundColor\": \"#c1d4fd\",\r\n    \"id\":{{EventIdFuture}},\r\n    \"oldStartAt\":\"{{OldStartAt}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}updatePersonal",
+					"host": [
+						"{{mainURL}}updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление события из прошлго",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":{{EventIdPast}},\r\n    \"startAt\":\"{{OldStartAtPast}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}removePersonal",
+					"host": [
+						"{{mainURL}}removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление события из будущего",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":{{EventIdFuture}},\r\n    \"startAt\":\"{{OldStartAtFuture}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}removePersonal",
+					"host": [
+						"{{mainURL}}removePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление события из настоящего",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{tokenAuth}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":{{EventIdNow}},\r\n    \"startAt\":\"{{OldStartAtNow}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainURL}}removePersonal",
+					"host": [
+						"{{mainURL}}removePersonal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "tokenAuth",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NzIwMDY5LCJpZGVudGl0eSI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMyMEBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5ODU0NTg2NTY4IiwibmFtZSI6InRlc3QiLCJzdXJuYW1lIjpudWxsLCJlbWFpbCI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsInVpTGFuZ3VhZ2UiOiJydSIsImxvY2FsZSI6InJ1Iiwic2VydmljZUxvY2FsZSI6bnVsbCwidWFzIjozMCwiand0VHlwZSI6MSwianRpIjoiRmZDYjFhYndYazZxWjc4N1JGY3BtUzBuem14aUhNMzEiLCJicmFuZCI6bnVsbCwiZXhwIjoxNjg3ODI5NTI5LCJhSXNTdHJvbmciOnRydWUsImFUeXBlIjoiVVNFUk5BTUVfUEFTU1dPUkQiLCJhVGltZSI6MTY4Nzc0MzEyNiwicm9sZXMiOlsiUk9MRV9URUFDSEVSX0NBTkRJREFURSIsIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEVfQkFTRV9BQ0NFU1MiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.Pi-V7uM6OtqllPf9nvHRjxdBhhvflh2-LT4pqY_ZxSEfzGHX0N4uAdFhqWQtlU4BHIhDCPhT134VsvllXMRFFcNIaFyZFWSGfQwve6x6CZFPvE3HLmWdiw-3nzXDFalR9HanLQuYSJ20IkQJshhbJioyVAF2M4RHN8ISHX7TdCgRCWL8jPi69tRFVKkdIc1QXkFkIALlH9Jur9bvTV5k-CPyTmUu1C4t7zZfjw0v0JXorvkq5356DmopAn8A4vuRBhUAJeMPy0v_y8JlZCyQj9szLfQNOqjzbIgN_BrMKIxqingHJl3AJ9ILyn91_ZTCFmsKQZAuY-EJBdCz2HISsfV7bf3GaKmmurKCWdyqwQv_COKLYezj8xNuKwQWuPTV7cD489pqDtYTSYqaL1F7nit8tp-6FiJ7MMjulAK3-Bdpsi7zcKq7MxYxkhVP5WSs2oMJfRFcbjmrgNerHsR4Z6PGKVNgMJKpqTDD_L6ohC86BS058uwKQM6AkJghYk_Rh628jV80Azkteu_GoxUFXsJSCbijUIc50Ezv6ykblw97IRquo9856ab5Cq-R5ZHDXtvIVUIKCBsyn8VIMd0LtKhaZFM7pq2QzXsoaJTYnlDQzOYOIiqcnqc0m-JNJtk9KI7_f9rNUNXfLj3UtXNqSbeIOr6Jneq9azYhBzI1UIE",
+			"type": "string"
+		},
+		{
+			"key": "mainURL",
+			"value": "https://api-teachers.skyeng.ru/v2/schedule/",
+			"type": "string"
+		},
+		{
+			"key": "EventIdPast",
+			"value": ""
+		},
+		{
+			"key": "EventIdFuture",
+			"value": ""
+		},
+		{
+			"key": "EventIdNow",
+			"value": ""
+		},
+		{
+			"key": "OldStartAtPast",
+			"value": ""
+		},
+		{
+			"key": "OldStartAtFuture",
+			"value": ""
+		},
+		{
+			"key": "OldStartAtNow",
+			"value": ""
+		}
+	]
+}
