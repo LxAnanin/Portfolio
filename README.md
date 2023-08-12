@@ -14,7 +14,7 @@
 
 ## Проекты
 Проект 1: тест кабинета учителя в приложении Skyeng
-<a href="[https://testqa35.atlassian.net/wiki/spaces/MP/pages/33272/EX1+1](https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-)https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-">Ссылка на проект</a>
+<a href="https://lxananin.atlassian.net/wiki/spaces/~5e22dcc35523db0ca66befd7/pages/4947969/1-+2-">Ссылка на проект </a>
 
 
 ## Контактная информация
